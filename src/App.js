@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import Hamburger from "./components/Hamburger";
 import Footer from "./components/Footer";
@@ -13,13 +13,13 @@ class App extends Component {
     return (
       <div>
         <Hamburger />
-        <Switch>
-          <Route path="/about" component={About} />
-          <Route path="/products" component={Products} />
-          <Route path="/notfound" component={NotFound} />
-          <Route exact path="/" component={Landing} />
-          <Redirect to="/notfound" />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/notfound" element={<NotFound />} />
+          <Route path="/*" element={<Navigate to="/notfound" />} />
+        </Routes>
         <Footer />
       </div>
     );
