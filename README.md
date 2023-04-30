@@ -19,7 +19,7 @@
 ## features
 
 - SPA app
-- get data in <a target="_blank" href="https://fakestoreapi.com/products">Fake Store API</a>
+- get data in <a target="_blank" href="https://fakestoreapi.com/">Fake Store API</a>
 
 ---
 
