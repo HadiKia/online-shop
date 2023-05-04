@@ -17,6 +17,7 @@ class Products extends Component {
         products: response.data,
       })
     )
+    document.title = "Products"; 
   }
 
   render() {

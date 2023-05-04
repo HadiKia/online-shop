@@ -1,9 +1,12 @@
 import React from "react";
 import bannerImg from "./banner.png";
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 
 const Banner = () => {
+  useTitle("Home")
+
   return (
     <div className="container max-w-screen-2xl mx-auto mb-20 min-h-[calc(100vh_-_280px)] md:min-h-[calc(100vh_-_300px)]">
       <div className="flex flex-col px-5 items-center gap-y-8 md:flex-row md:gap-x-4 mb-10">
